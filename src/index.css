@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#0b0b0b;
+  --text:#e6e6e6;
+  --muted:#bebebe;
+  --accent:#d4af37;
+}
+
+body{background:var(--bg); color:var(--text); font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+
+.container{max-width:1160px}
+
+/* Botão dourado reutilizável */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom, #f6da8a, #b08d2a);
+  color: #0b0b0b;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25), 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: transform 150ms ease-out, filter 150ms ease-out, box-shadow 150ms ease-out, background 150ms ease-out;
+  text-decoration: none;
+}
+.btn-gold:hover {
+  transform: translateY(-1px) scale(1.03);
+  filter: brightness(0.96);
+  box-shadow: 0 12px 26px rgba(212, 175, 55, 0.28), 0 2px 4px rgba(0, 0, 0, 0.45);
+}
+.btn-gold:active {
+  transform: scale(0.98);
+  filter: brightness(0.93);
+}
+.btn-gold:focus-visible {
+  outline: 2px solid rgba(212, 175, 55, 0.7);
+  outline-offset: 2px;
+}
